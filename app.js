@@ -4,9 +4,6 @@ const app=express();
 const mongoose=require('mongoose');
 const movies=require('./models/movies.js');
 
-const cors=require('cors');
-app.use(cors());
-
 mongoose.connect('mongodb://127.0.0.1:27017/moviesDb').then(()=>console.log('DB Connected')).catch((e)=>console.log(e));
 
 app.use(express.static(path.join(__dirname,'public')));
