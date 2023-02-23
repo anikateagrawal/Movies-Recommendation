@@ -18,7 +18,6 @@ app.get('/',(req,res)=>{
 
 app.get('/search',async(req,res)=>{
     const {q}=req.query;
-    console.log(q);
     const data=await movies.find({name:{$regex:`^${q}`}});
-    res.status(200).send(data);
+    res.status(200).json(data);
 })
