@@ -4,7 +4,7 @@ const app=express();
 const mongoose=require('mongoose');
 const movies=require('./models/movies.js');
 
-mongoose.connect('mongodb://127.0.0.1:27017/moviesDb').then(()=>console.log('DB Connected')).catch((e)=>console.log(e));
+mongoose.connect('mongodb+srv://Anikate7316ag:Anikate%4025@cluster0.ofjnmbo.mongodb.net/moviesDb').then(()=>console.log('DB Connected')).catch((e)=>console.log(e));
 
 app.use(express.static(path.join(__dirname,'public')));
 
