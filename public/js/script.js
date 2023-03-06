@@ -1,4 +1,4 @@
-const url='http://localhost:3000/search?q=';
+const url='/search?q=';
 const searchInput=document.getElementById('search');
 searchInput.addEventListener('keyup',search)
 
